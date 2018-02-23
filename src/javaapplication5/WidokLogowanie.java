@@ -4,10 +4,7 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
-/**
- *
- * @author Kuba
- */
+
 public class WidokLogowanie extends javax.swing.JFrame {
 
     private String zapytania_sql;
@@ -21,7 +18,7 @@ public class WidokLogowanie extends javax.swing.JFrame {
     
     public WidokLogowanie() {
         initComponents();
-        this.setTitle("Biblioteka : gość");
+        this.setTitle("Biblioteka : gosc");
         
     }
 

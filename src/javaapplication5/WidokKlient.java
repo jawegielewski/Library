@@ -22,10 +22,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-/**
- *
- * @author Kuba
- */
+
 public class WidokKlient extends javax.swing.JFrame {
 
         Database db = new Database();

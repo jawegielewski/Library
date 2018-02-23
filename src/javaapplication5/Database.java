@@ -8,13 +8,8 @@ import java.sql.Statement;
 
 public class Database 
 {
-    private String polaczenieURL = "jdbc:mysql://localhost/biblioteka?user=root&password=";
-    private String query;
-
-    public String getQuery() { return query; }
-    public void setQuery(String query) { this.query = query; }
-    
-    private String dane;
+    private String connURL = "jdbc:mysql://localhost/biblioteka?user=root&password=";
+    private String data;
     private Connection conn = null;
     
     
@@ -24,7 +19,7 @@ public class Database
 
         try
         {
-            conn = DriverManager.getConnection(polaczenieURL);
+            conn = DriverManager.getConnection(connURL);
             Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception ex){System.out.println(ex);}
@@ -42,11 +37,11 @@ public class Database
             ResultSet rs = stmt.executeQuery(query);
             while(rs.next()) 
             {
-                dane = rs.getString(1);
+                data = rs.getString(1);
             }
         }
         catch (SQLException ex) {System.out.println(ex);}
-        return dane;
+        return data;
     }
     
     public void usunDodaj(String query)

@@ -18,39 +18,30 @@ import java.util.*;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
-/**
- *
- * @author Kuba
- */
+
 public class WidokPracownik extends javax.swing.JFrame {
 
-        Database db = new Database();
-        String selectedData = "";
-        String selectedData2 = "";
-        Date dzis = new Date();
-        DefaultTableModel dtm;
-        DefaultTableModel dtm2;
-        DefaultTableModel dtm3;
-        DefaultTableModel dtm4;
-        DefaultTableModel dtm5;
-        DefaultTableModel dtm6;
-        String idk;
-        boolean ba=false;
-        boolean c=false;
-        String query="";
-        String imie;
-        String nazwisko;
+        private Database db = new Database();
+        private String selectedData = "";
+        private Date dzis = new Date();
+        private DefaultTableModel dtm;
+        private DefaultTableModel dtm2;
+        private DefaultTableModel dtm3;
+        private DefaultTableModel dtm4;
+        private DefaultTableModel dtm5;
+        private DefaultTableModel dtm6;
+        private String idk;
+        private String query="";
+        private String imie;
+        private String nazwisko;
         
-        boolean wszystko=true;
-        boolean ksiazki=false;
-        boolean czasopisma=false;
-        boolean filmy=false;
-        Connection conn = null;
-        Statement stmt;
+        private boolean wszystko=true;
+        private boolean ksiazki=false;
+        private boolean czasopisma=false;
+        private boolean filmy=false;
+        private Connection conn = null;
+        private Statement stmt;
         
         public WidokPracownik() {
         initComponents();  
@@ -65,9 +56,7 @@ public class WidokPracownik extends javax.swing.JFrame {
         stmt = conn.createStatement();
         this.imie=imie;
         this.nazwisko=nazwisko;
-        //Color myColor = Color.decode("#b5b5cc");
-        //this.getContentPane().setBackground(myColor);
-        //Date date = new Date();
+
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         this.setTitle("Biblioteka : pracownik");
         
